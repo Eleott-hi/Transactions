@@ -182,10 +182,13 @@ void Program::ProceedTtl(const std::vector<std::string>& tokens) {
     return;
   }
 
-  if (storage_->Exists(tokens[1]))
-    Console::WriteLine("> " + std::to_string(storage_->Ttl(tokens[1])));
-  else
+  if (storage_->Exists(tokens[1])) {
+    int lifetime = storage_->Ttl(tokens[1]);
+    Console::WriteLine(
+        "> " + (lifetime > -1 ? std::to_string(lifetime) : "unlimited"));
+  } else {
     Console::WriteLine("> (null)");
+  }
 }
 
 void Program::ProceedFind(const std::vector<std::string>& tokens) {
