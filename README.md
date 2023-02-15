@@ -41,7 +41,7 @@ To build project enter project directory in the terminal and input `make`. It'll
 Enter mode: [1 - HashTable, 2 - B+ Tree, 3 - RB Tree]
 > 
 ```
-If you see the output below - everything is correct and the program works just fine.
+If you see the output above - everything is correct and the program works just fine.
 
 You can choose any storage implementation (Hashtable, b+tree, red-black tree) and start to insert your data.
 
